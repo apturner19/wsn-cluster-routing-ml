@@ -49,4 +49,4 @@ To replicate or extend this work:
 The dataset used in this project is the [WSN-DS](https://www.kaggle.com/datasets/bassamkasasbeh1/wsnds) dataset that is publicly available
 
 ## Developer
-[Austin Turner]
+Austin Turner
