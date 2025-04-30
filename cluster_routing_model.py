@@ -102,6 +102,14 @@ metrics = {
     }
 }
 
+print("\n** Neural Network Results **")
+nn_eval = nn_model.evaluate(X_test_proc, y_test, verbose=0)
+print(f"Test Loss:      {nn_eval[0]:.4f}")
+print(f"Test Accuracy:  {nn_eval[1]:.4f}")
+print(f"Test Precision: {nn_eval[2]:.4f}")
+print(f"Test Recall:    {nn_eval[3]:.4f}")
+print(classification_report(y_test, y_pred_nn))
+
 # Baseline Models for comparison
 models = {
     'Logistic Regression': LogisticRegression(solver='saga', max_iter=500, n_jobs=-1),
@@ -115,6 +123,8 @@ for name, clf in models.items():
         X_tr, _, y_tr, _ = train_test_split(
             X_train_proc, y_train, train_size=0.3, stratify=y_train, random_state=42
         )
+        print(f"\n** SVM **")
+        print(classification_report(y_test, y_pred))
     else:
         X_tr, y_tr = X_train_proc, y_train
     clf.fit(X_tr, y_tr)
@@ -125,6 +135,8 @@ for name, clf in models.items():
         'Recall': recall_score(y_test, y_pred),
         'F1': f1_score(y_test, y_pred)
     }
+    print(f"\n** {name} **")
+    print(classification_report(y_test, y_pred))
 
 # Plot bar chart to compare performance
 metrics_df = pd.DataFrame(metrics)
