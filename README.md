@@ -29,7 +29,8 @@ This repository contains machine learning implementations designed to optimize c
   - F1-score
 
 ## Results
-- Performance comparison chart visualizing model effectiveness across key metrics
+- All models performed with an accuracy of 98% or greater, with the **Random Forest** model achieving the best overall performance (Recall: 95%, F1-score: 97%).
+- A grouped bar chart visually compares model performance across all metrics.
 
 ## Technologies Used
 - Python
@@ -40,13 +41,13 @@ This repository contains machine learning implementations designed to optimize c
 - Matplotlib
 
 ## Usage
-To replicate or extend this work:
-1. Clone the repository.
+To replicate this work:
+1. Clone the repository
 2. Install the required libraries (`pip install tensorflow numpy pandas scikit-learn matplotlib`)
-3. Run the provided Python script to preprocess the data, train models, and visualize results
+3. Run the provided Python script
 
 ## Dataset
-The dataset used in this project is the [WSN-DS](https://www.kaggle.com/datasets/bassamkasasbeh1/wsnds) dataset that is publicly available
+The dataset used in this project is publicly available: [WSN-DS](https://www.kaggle.com/datasets/bassamkasasbeh1/wsnds)
 
 ## Developer
 Austin Turner
