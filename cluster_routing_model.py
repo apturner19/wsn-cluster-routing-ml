@@ -123,8 +123,6 @@ for name, clf in models.items():
         X_tr, _, y_tr, _ = train_test_split(
             X_train_proc, y_train, train_size=0.3, stratify=y_train, random_state=42
         )
-        print(f"\n** SVM **")
-        print(classification_report(y_test, y_pred))
     else:
         X_tr, y_tr = X_train_proc, y_train
     clf.fit(X_tr, y_tr)
